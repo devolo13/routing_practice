@@ -7,14 +7,6 @@ const Home = (props) => {
   );
 }
 
-const Test = (props) => {
-  const {word} = useParams();
-  console.log(word);
-  return (
-    <h1 mt-3>Test Component</h1>
-  );
-}
-
 const DisplayInfo = (props) => {
   const {info} = useParams();
   const {color1} = useParams();
@@ -37,7 +29,6 @@ const DisplayInfo = (props) => {
 function App() {
   return (
     <div className="container">
-      {/* <h1 className="text-center">testing</h1> */}
       <Routes>
         <Route path='/home' element={<Home/>}/>
         <Route path='/:info' element={<DisplayInfo/>}/>
